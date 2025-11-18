@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from 'zod';
- 
+
 const FormSchema = z.object({
   id: z.string(),
   customerId: z.string(),
@@ -9,7 +9,7 @@ const FormSchema = z.object({
   status: z.enum(['pending', 'paid']),
   date: z.string(),
 });
- 
+
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 
 export async function createInvoice(formData: FormData) {
@@ -18,4 +18,5 @@ export async function createInvoice(formData: FormData) {
     amount: formData.get('amount'),
     status: formData.get('status'),
   });
+  const amountInCents = amount * 100;
 }
