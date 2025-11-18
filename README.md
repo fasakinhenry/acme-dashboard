@@ -73,7 +73,7 @@ Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/) (v14 or later)
 - [pnpm](https://pnpm.io/) (preferred package manager)
 - [PostgreSQL](https://www.postgresql.org/) (We use a cloud database like Neon) - optional
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/) (version control)
 
 **Steps**:
 
